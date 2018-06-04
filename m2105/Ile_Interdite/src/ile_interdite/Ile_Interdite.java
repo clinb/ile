@@ -10,7 +10,6 @@ package ile_interdite;
  * @author clinb
  */
 public class Ile_Interdite {
-    private int wawgitctrobien;
 
     /**
      * @param args the command line arguments

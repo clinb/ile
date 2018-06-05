@@ -3,14 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ile_interdite;
+package Controleur;
+
+import Joueur.Joueur;
+import Tuile.Tuile;
+import java.util.ArrayList;
 
 /**
  *
  * @author clinb
  */
-public class Ile_Interdite {
-
+public class Controleur {
+    ArrayList<Joueur> Joueurs = new ArrayList<>();
     /**
      * @param args the command line arguments
      */
@@ -44,7 +48,7 @@ public class Ile_Interdite {
         
     }
     
-    public boolean rechercheTuileInondéeAdjacente(int coordonnéeAventurierX, int coordonnéeAventurierY) {
+    public boolean rechTuileInondAdj(int AventX, int AventY) {
         return false;
         
     }

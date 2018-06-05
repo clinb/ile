@@ -3,7 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ile_interdite;
+package Joueur;
+
+import Tuile.Tuile;
+import Aventurier.Action;
+import Tresor.Tresor;
 
 /**
  *
@@ -35,11 +39,11 @@ public class Joueur {
         
     }
     
-    public void retraitCarte(CarteTresor carte) {
+    public void delCarte(CarteTresor carte) {
         
     }
     
-    public void gagnerTresor(Tresor tresor) {
+    public void ggTresor(Tresor tresor) {
         
     }
     
@@ -47,7 +51,7 @@ public class Joueur {
         
     }
     
-    public void utiliserCarteSpe(CarteTresor carte) {
+    public void useCarteSpe(CarteTresor carte) {
         
     }
     

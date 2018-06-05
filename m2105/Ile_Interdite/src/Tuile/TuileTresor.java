@@ -10,5 +10,5 @@ package Tuile;
  * @author clinb
  */
 public class TuileTresor {
-    
+    private 
 }

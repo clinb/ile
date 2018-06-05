@@ -5,7 +5,7 @@
  */
 package Joueur;
 
-import Tuile.Tuile;
+import Grille.Tuile;
 import Aventurier.Action;
 import Tresor.Tresor;
 

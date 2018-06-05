@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Tuile;
+package Grille;
 
 /**
  *
@@ -12,5 +12,5 @@ package Tuile;
 public enum EtatTuile {
     seche,
     inondee,
-    coulée  
+    coulee  
 }

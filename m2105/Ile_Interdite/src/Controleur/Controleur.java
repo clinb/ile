@@ -6,7 +6,7 @@
 package Controleur;
 
 import Joueur.Joueur;
-import Tuile.Tuile;
+import Grille.Tuile;
 import java.util.ArrayList;
 
 /**

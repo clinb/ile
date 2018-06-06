@@ -10,9 +10,10 @@ package Aventurier;
  * @author clinb
  */
 public enum Action {
-    assecher,
-    deplacer,
-    donnerCarte,
-    utilisationCarteSpeciale,
-    assemblerTresor
+    ASSECHER,
+    DEPLACER,
+    DONNERCARTE,
+    UTILISATIONCARTESPECIAL,
+    ASSEMBLERTRESOR,
+    CAPACITESPECIAL
 }

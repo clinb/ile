@@ -63,4 +63,13 @@ public class Controleur {
         aventuriersDispo.add(ingenieur);
         
     } 
+    public int rechercheAventurierCourant(){
+        boolean cherche = false;
+        int joueurcourant = 0;
+        do{
+            
+        }while(joueurcourant < joueurs.size() && cherche=true);
+        
+        return joueurcourant;
+    }
 }

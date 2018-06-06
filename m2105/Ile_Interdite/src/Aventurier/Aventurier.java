@@ -31,24 +31,87 @@ public abstract class Aventurier {
         this.PA = 3;
         grille.setGrille();
     }
-    
-    
-    public void setPosI(){
-        
-    }
-    
-    public void setPosJ(){
-    
-    }
-    
+      
     public int getPosI(){
-        this.posI = grille.getITuile(caseDepart);
         return posI;
     }
     public int getPosJ(){
-        this.posJ = grille.getJTuile(caseDepart);
         return posJ;
     }
+    
+    public void setPosI(int newPosI){
+        this.posI = newPosI;
+    }
+    
+    public void setPosJ(int newPosJ){
+        this.posI = newPosJ;
+    }
+    
+    
+    
+    public void deplacementPossible(){
+        
+        droite = false;
+        gauche = false;
+        haut = false;
+        bas = false;
+        nulpart = true;
+        
+        System.out.println("Vous pouvez vous déplacer ...");
+        
+        if(grille.getTuile(posI, posJ).getEtatTuile(posI, posJ+1)!= EtatTuile.COULEE){  //Etat tuile droite adjacente
+            droite = true;
+            System.out.println("à droite");
+            nulpart = false;
+        }
+        if(grille.getTuile(posI, posJ).getEtatTuile(posI, posJ-1)!= EtatTuile.COULEE){  //Etat tuile gauche adjacente
+            gauche = true;
+            System.out.println("à gauche");
+            nulpart = false;
+        }
+        if(grille.getTuile(posI, posJ).getEtatTuile(posI-1, posJ)!= EtatTuile.COULEE){  //Etat tuile haut adjacente
+            haut = true; 
+            System.out.println("en haut");
+            nulpart = false;
+        }
+        if(grille.getTuile(posI, posJ).getEtatTuile(posI+1, posJ)!= EtatTuile.COULEE){  //Etat tuile bas adjacente
+            bas = true; 
+            System.out.println("en bas");
+            nulpart = false;
+        }
+        if (nulpart){
+            System.out.println("nul part");
+        }
+    }
+        
+    public void deplacement(){
+        deplacementPossible();
+        if(PA>0 && !nulpart){
+            Scanner choix = new Scanner(System.in);
+            System.out.println("Choisissez la direction de déplacement : ");
+            System.out.println("d, g, h, b");
+            String direction = choix.nextLine();
+            if(direction == "d" && droite){
+                posJ = posJ+1;
+            }
+            if(direction == "g" && gauche){
+                posJ = posJ-1;
+            }
+            if(direction == "h" && haut){
+                posI = posI-1;
+            }
+            if(direction == "b" && bas){
+                posI = posI+1;
+            }
+            PA = PA - 1;
+        }
+    }
+    
+    
+    
+    
+    
+    
     
     public void assecher(){
         boolean droite = false, gauche=false , bas=false, haut=false, nulpart= true;
@@ -82,7 +145,7 @@ public abstract class Aventurier {
         //je part de l'optique qu'il a encore des PA car c'est au tour de jeux d'y regarder
         
         
-        // je demande a l'utilisateur de choisir son action du moi si c'est possible
+        // je demande a l'utilisateur de choisir son action si c'est possible
         
         if(!nulpart){
         Scanner choix = new Scanner(System.in);

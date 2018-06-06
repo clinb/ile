@@ -31,4 +31,30 @@ public abstract class Aventurier {
     }
     
     
+    public void setPosI(){
+        
+    }
+    
+    public void setPosJ(){
+    
+    }
+    
+    public int getPosI(){
+        this.posI = grille.getITuile(caseDepart);
+        return posI;
+    }
+    public int getPosJ(){
+        this.posJ = grille.getJTuile(caseDepart);
+        return posJ;
+    }
+    
+    public Tuile deplacementPossible(int i,  int j){
+        
+    }
+    
+    
+    
+    public void deplacement()
+            
+    
 }

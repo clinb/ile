@@ -10,7 +10,7 @@ package Grille;
  * @author clinb
  */
 public enum EtatTuile {
-    seche,
-    inondee,
-    coulee  
+    SECHE,
+    INONDEE,
+    COULEE  
 }

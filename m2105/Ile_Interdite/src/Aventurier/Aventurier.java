@@ -52,6 +52,7 @@ public abstract class Aventurier {
     
     public void assecher(){
         boolean droite = false, gauche=false , bas=false, haut=false, nulpart= true;
+        String info;
         // les verifications
         System.out.println("\nvous pouvez assecher les cases...\n");
         if(grille.getTuile(posI, posJ).getEtatTuile(posI,posJ +1) == EtatTuile.INONDEE){
@@ -82,22 +83,27 @@ public abstract class Aventurier {
         
         
         // je demande a l'utilisateur de choisir son action du moi si c'est possible
-        String info;
+        
         if(!nulpart){
         Scanner choix = new Scanner(System.in);
         System.out.println("Veuillez choisir quelle case voulez vous assechez parmi :\n");
         
         do{if(droite){
             System.out.println("-droite");
+            grille.getTuile(posI, posJ).setEtatTuile(EtatTuile.SECHE);
         }       
         if(gauche){
             System.out.println("-gauche");
+            grille.getTuile(posI, posJ).setEtatTuile(EtatTuile.SECHE);
         }
         if(haut){
             System.out.println("-en haut");
+            grille.getTuile(posI, posJ).setEtatTuile(EtatTuile.SECHE);
         }
         if(bas){
             System.out.println("-en bas\n");
+            
+            grille.getTuile(posI, posJ).setEtatTuile(EtatTuile.SECHE); 
         }
             System.out.println("-pas bouger\n");
             System.out.println("CHOISIS !");
@@ -105,15 +111,6 @@ public abstract class Aventurier {
         }while(info != "droite" || info != "gauche" || info != "haut" || info != "bas" || info != "pas bouger");
         }
         
-        if(info == "droite"){
-            
-        }else if(info == "gauche"){
-            
-        }else if(info == "haut"){
-            
-        }else if(info == "bas"){
-            
-        }
         
     }
 }

@@ -16,5 +16,10 @@ public class Explorateur extends Aventurier {
     public Explorateur(String nom, int numTourDeJeux, Tuile caseDepart) {
         super(nom, numTourDeJeux, caseDepart);
     }
+    public void assecherExplorateur(){
+        
+        super.assecher();
+        
+    }
     
 }

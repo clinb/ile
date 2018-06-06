@@ -29,6 +29,9 @@ public class Tuile{
     public EtatTuile getEtatTuile(int posJ, int posI){
         return etatTuile;
     }
+    public void setEtatTuile(EtatTuile e){
+        this.etatTuile=e;
+    }
     
     
     

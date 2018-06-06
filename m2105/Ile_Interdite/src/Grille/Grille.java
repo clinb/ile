@@ -62,7 +62,7 @@ public class Grille {
     public Tuile getTuile(String nomTuile) {
         Tuile res = null;
         for (int i = 0; i < tableauTuile.length; i++) {
-            for (int j = 0; i < tableauTuile.length; j++) {
+            for (int j = 0; j < tableauTuile.length; j++) {
                 if (tableauTuile[i][j].getNomTuile() == nomTuile) {
                     res = tableauTuile[i][j];
                 }
@@ -74,7 +74,7 @@ public class Grille {
     public int getITuile(Tuile tuile) {
         int res = 0;
         for (int i = 0; i < tableauTuile.length; i++) {
-            for (int j = 0; i < tableauTuile.length; j++) {
+            for (int j = 0; j < tableauTuile.length; j++) {
                 if (tableauTuile[i][j] == tuile) {
                     res = i;
                 }
@@ -86,7 +86,7 @@ public class Grille {
     public int getJTuile(Tuile tuile) {
         int res = 0;
         for (int i = 0; i < tableauTuile.length; i++) {
-            for (int j = 0; i < tableauTuile.length; j++) {
+            for (int j = 0; j < tableauTuile.length; j++) {
                 if (tableauTuile[i][j] == tuile) {
                     res = j;
                 }

@@ -18,7 +18,7 @@ public abstract class Aventurier {
     private int posJ;
     private int PA;
     private Tuile caseDepart;
-    private Grille grille;
+    private Grille grille = new Grille();
 
     public Aventurier(String nom, int numTourDeJeux, Tuile caseDepart) {
         this.nom = nom;
@@ -27,6 +27,7 @@ public abstract class Aventurier {
         this.posI = grille.getITuile(caseDepart);
         this.posJ = grille.getJTuile(caseDepart);
         this.PA = 3;
+        grille.setGrille();
     }
     
     

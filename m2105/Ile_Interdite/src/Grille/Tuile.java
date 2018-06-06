@@ -13,6 +13,8 @@ public class Tuile{
     private String nomTuile;
     private EtatTuile etatTuile;
     private TypeTuile typeTuile;
+    private int posI;
+    private int posJ;
 
     public Tuile(String nomTuile, EtatTuile etatTuile, TypeTuile typeTuile) {
         this.nomTuile = nomTuile;
@@ -23,6 +25,8 @@ public class Tuile{
     public String getNomTuile() {
         return nomTuile;
     }
+    
+    
     
     
     

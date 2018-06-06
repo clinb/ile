@@ -19,6 +19,15 @@ public class Tuile{
         this.etatTuile = etatTuile;
         this.typeTuile = typeTuile;
     }
+
+    public Tuile(String nomTuile) {
+        this.nomTuile = nomTuile;
+    }
+
+    public String getNomTuile() {
+        return nomTuile;
+    }
+    
     
     
 }

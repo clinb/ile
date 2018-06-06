@@ -57,7 +57,42 @@ public class Grille {
         tableauTuile[5][3] = new Tuile("jardinDesMurmures", EtatTuile.inondee, TypeTuile.tuileTresor);
         tableauTuile[5][4] = new Tuile(null, null, null);
         tableauTuile[5][5] = new Tuile(null, null, null);
-        
-        
     }
+    
+    public Tuile getTuile(String nomTuile) {
+        Tuile res = null;
+        for (int i = 0; i < tableauTuile.length; i++) {
+            for (int j = 0; i < tableauTuile.length; j++) {
+                if (tableauTuile[i][j].getNomTuile() == nomTuile) {
+                    res = tableauTuile[i][j];
+                }
+            }
+        }
+        return res;
+    }
+    
+    public int getITuile(Tuile tuile) {
+        int res = 0;
+        for (int i = 0; i < tableauTuile.length; i++) {
+            for (int j = 0; i < tableauTuile.length; j++) {
+                if (tableauTuile[i][j] == tuile) {
+                    res = i;
+                }
+            }
+        }
+        return res;
+    }
+    
+    public int getJTuile(Tuile tuile) {
+        int res = 0;
+        for (int i = 0; i < tableauTuile.length; i++) {
+            for (int j = 0; i < tableauTuile.length; j++) {
+                if (tableauTuile[i][j] == tuile) {
+                    res = j;
+                }
+            }
+        }
+        return res;
+    }
+    
 }

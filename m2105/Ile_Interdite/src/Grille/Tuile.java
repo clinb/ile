@@ -20,10 +20,6 @@ public class Tuile{
         this.typeTuile = typeTuile;
     }
 
-    public Tuile(String nomTuile) {
-        this.nomTuile = nomTuile;
-    }
-
     public String getNomTuile() {
         return nomTuile;
     }

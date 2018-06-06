@@ -5,10 +5,16 @@
  */
 package Aventurier;
 
+import Grille.Tuile;
+
 /**
  *
  * @author clinb
  */
 public class Plongeur extends Aventurier {
+    
+    public Plongeur(String nom, int numTourDeJeux, Tuile caseDepart) {
+        super(nom, numTourDeJeux, caseDepart);
+    }
     
 }

@@ -5,10 +5,16 @@
  */
 package Aventurier;
 
+import Grille.Tuile;
+
 /**
  *
  * @author clinb
  */
 public class Ingenieur extends Aventurier {
+    
+    public Ingenieur(String nom, int numTourDeJeux, Tuile caseDepart) {
+        super(nom, numTourDeJeux, caseDepart);
+    }
     
 }

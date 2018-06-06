@@ -5,10 +5,16 @@
  */
 package Aventurier;
 
+import Grille.Tuile;
+
 /**
  *
  * @author clinb
  */
 public class Pilote extends Aventurier {
+    
+    public Pilote(String nom, int numTourDeJeux, Tuile caseDepart) {
+        super(nom, numTourDeJeux, caseDepart);
+    }
     
 }

@@ -18,12 +18,15 @@ public abstract class Aventurier {
     private int posJ;
     private int PA;
     private Tuile caseDepart;
+    private Grille grille;
 
     public Aventurier(String nom, int numTourDeJeux, Tuile caseDepart) {
         this.nom = nom;
         this.numTourDeJeux = numTourDeJeux;
         this.caseDepart = caseDepart;
-        this.posI = 
+        this.posI = grille.getITuile(caseDepart);
+        this.posJ = grille.getJTuile(caseDepart);
+        this.PA = 3;
     }
     
     

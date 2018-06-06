@@ -17,26 +17,32 @@ import jdk.nashorn.internal.runtime.JSType;
  */
 public class Controleur {
     private ArrayList<Aventurier> joueurs = new ArrayList<>();
-    private ArrayList<Aventurier> aventuriersDispo = new ArrayList<>();
+    private static int nbJoueurs;
+    private static Grille grille;
     private Plongeur plongeur;
-    private Navigateur navigateur;
-    private Explorateur explorateur;
-    private Pilote pilote;
-    private Ingenieur ingenieur;
-    private Messager messager;
+    private 
+    
     /**
      * @param args the command line arguments
      */
     
     public static void main(String[] args) {
         // TODO code application logic here
-        int nbJoueurs = 0;
+        grille.setGrille();
+        nbJoueurs = 0;
         
         Scanner choix = new Scanner(System.in);
         while ((nbJoueurs < 2)||(nbJoueurs > 4)) {
             System.out.print("Choisissez le nombre de joueurs (entre 2 et 4) : ");
             nbJoueurs = choix.nextInt();
         }
+    }
+    
+    public void choixAction(Action action) {
+        
+    }
+    
+    public void choixAventurier(String choix) {
         for (int i = 1; i <= nbJoueurs; i++) {
             System.out.println("Choix de l'aventurier du joueur " + i);
             System.out.println("\tChoix disponibles :");
@@ -46,21 +52,13 @@ public class Controleur {
             System.out.println("\t\tPilote");
             System.out.println("\t\tMessager");
             System.out.println("\t\tIngenieur");
-            
+            if (choix.equalsIgnoreCase("plongeur") && joueurs.contains(plongeur)) {
+                plongeur = new Plongeur("plongeur", i, grille.getTuile("porteDeFer"));
+                joueurs.add(plongeur);
+            }
+            if (choix.equalsIgnoreCase("plongeur")) {
+                Plongeur plongeur = new Plongeur("plongeur", i, grille.getTuile("porteDeFer"));
+            }
         }
-    }
-    
-    public void choixAction(Action action) {
-        
-    }
-    
-    public void choixAventurier(String choix) {
-        aventuriersDispo.add(plongeur);
-        aventuriersDispo.add(pilote);
-        aventuriersDispo.add(explorateur);
-        aventuriersDispo.add(messager);
-        aventuriersDispo.add(navigateur);
-        aventuriersDispo.add(ingenieur);
-        
     } 
 }

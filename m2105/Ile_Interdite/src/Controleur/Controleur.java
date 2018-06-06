@@ -52,6 +52,7 @@ public class Controleur {
         for (int i = 1; i <= nbJoueurs; i++) {
             boolean selec = false;
             while (selec == false) {
+                // nous permet de demander a l'utilisateur qui il veut incarner comme aventurier
                 System.out.println("Choix de l'aventurier du joueur " + i);
                 System.out.println("\tChoix disponibles :");
                 if (!joueurs.contains(messager)) {
@@ -72,7 +73,7 @@ public class Controleur {
                 if (!joueurs.contains(explorateur)) {
                     System.out.println("\t\tExplorateur");
                 }
-                
+                // il faut que l'aventurier ne soit pas deja pris, que l'orthographe soit correct
                 choixAventurier = choix.nextLine();
                 if (choixAventurier.equalsIgnoreCase("plongeur") && !joueurs.contains(plongeur)) {
                     plongeur = new Plongeur("plongeur", i, grille.getTuile("porteDeFer"));
@@ -105,13 +106,13 @@ public class Controleur {
                     System.out.println("\n\tJoueur enregistré");
                     selec = true;
                 } else {
-                    System.out.println("Nom mal tapé ou aventurier déjà enregistré");
+                    System.out.println("Nom mal tapé ou aventurier déjà enregistré !");
                 }
                
             }
             selec = false;
         }
-        System.out.println("Tous les joueurs sont bien enregistrés");
+        System.out.println("Tous les joueurs sont bien enregistrés !");
     }
     
 }

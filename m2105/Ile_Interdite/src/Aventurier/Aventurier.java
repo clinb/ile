@@ -6,6 +6,7 @@
 package Aventurier;
 
 import Grille.*;
+import java.util.Scanner;
 
 /**
  *
@@ -19,6 +20,7 @@ public abstract class Aventurier {
     private int PA;
     private Tuile caseDepart;
     private Grille grille = new Grille();
+    private  boolean droite, gauche, bas, haut, nulpart;
 
     public Aventurier(String nom, int numTourDeJeux, Tuile caseDepart) {
         this.nom = nom;
@@ -48,13 +50,71 @@ public abstract class Aventurier {
         return posJ;
     }
     
-    public Tuile deplacementPossible(int i,  int j){
+    public void assecher(){
+        boolean droite = false, gauche=false , bas=false, haut=false, nulpart= true;
+        // les verifications
+        System.out.println("\nvous pouvez assecher les cases...\n");
+        if(grille.getTuile(posI, posJ).getEtatTuile(posI,posJ +1) == EtatTuile.INONDEE){
+            System.out.println("\nvous pouvez assecher la casse a droite\n");
+            droite =true;
+            nulpart = false;
+        }
+        if(grille.getTuile(posI, posJ).getEtatTuile(posI,posJ - 1) == EtatTuile.INONDEE){
+            System.out.println("\nvous pouvez assecher la casse a gauche\n");
+            gauche = true;
+            nulpart = false;
+        }
+        if(grille.getTuile(posI, posJ).getEtatTuile(posI-1,posJ) == EtatTuile.INONDEE){
+            System.out.println("\n vous pouvez assecher la casse du haut");
+            haut = true;
+            nulpart = false;
+        }
+        if(grille.getTuile(posI, posJ).getEtatTuile(posI+1,posJ) == EtatTuile.INONDEE){
+            System.out.println("\n vous pouvez assecher la casse du bas");
+            bas = true;
+            nulpart = false;
+        }
+        if(nulpart){
+            System.out.println("Vous ne pouvez rien assecher dans les alentours");
+        }
+        
+        //je part de l'optique qu'il a encore des PA car c'est au tour de jeux d'y regarder
+        
+        
+        // je demande a l'utilisateur de choisir son action du moi si c'est possible
+        String info;
+        if(!nulpart){
+        Scanner choix = new Scanner(System.in);
+        System.out.println("Veuillez choisir quelle case voulez vous assechez parmi :\n");
+        
+        do{if(droite){
+            System.out.println("-droite");
+        }       
+        if(gauche){
+            System.out.println("-gauche");
+        }
+        if(haut){
+            System.out.println("-en haut");
+        }
+        if(bas){
+            System.out.println("-en bas\n");
+        }
+            System.out.println("-pas bouger\n");
+            System.out.println("CHOISIS !");
+            info = choix.nextLine();
+        }while(info != "droite" || info != "gauche" || info != "haut" || info != "bas" || info != "pas bouger");
+        }
+        
+        if(info == "droite"){
+            
+        }else if(info == "gauche"){
+            
+        }else if(info == "haut"){
+            
+        }else if(info == "bas"){
+            
+        }
         
     }
-    
-    
-    
-    public void deplacement()
-            
-    
 }
+

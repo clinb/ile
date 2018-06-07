@@ -26,7 +26,7 @@ public class Tuile{
         return nomTuile;
     }
     
-    public EtatTuile getEtatTuile(int posJ, int posI){
+    public EtatTuile getEtatTuile(){
         return etatTuile;
     }
     public void setEtatTuile(EtatTuile e){

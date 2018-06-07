@@ -219,22 +219,21 @@ public class Explorateur extends Aventurier {
                 if (hautgauche) {
                     System.out.println("-en hautGauche\n");
 
-                    grille.getTuile(posI -1, posJ).setEtatTuile(EtatTuile.SECHE);
+                    grille.getTuile(posI -1, posJ -1).setEtatTuile(EtatTuile.SECHE);
                 }
                 if (hautdroite) {
                     System.out.println("-en hautDroit\n");
 
-                    grille.getTuile(posI -1, posJ).setEtatTuile(EtatTuile.SECHE);
+                    grille.getTuile(posI -1, posJ+1).setEtatTuile(EtatTuile.SECHE);
                 }
                 if (basdroite) {
                     System.out.println("-en basDroit\n");
 
-                    grille.getTuile(posI -1, posJ).setEtatTuile(EtatTuile.SECHE);
+                    grille.getTuile(posI -1, posJ+1).setEtatTuile(EtatTuile.SECHE);
                 }
                 if (basgauche) {
                     System.out.println("-en basGauche\n");
-
-                    grille.getTuile(posI -1, posJ).setEtatTuile(EtatTuile.SECHE);
+                    grille.getTuile(posI -1, posJ-1).setEtatTuile(EtatTuile.SECHE);
                 }
                 
                 

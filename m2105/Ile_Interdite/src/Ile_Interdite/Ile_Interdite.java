@@ -5,6 +5,7 @@
  */
 package Ile_Interdite;
 
+import Aventurier.Action;
 import Controleur.*;
 
 
@@ -22,7 +23,7 @@ public class Ile_Interdite {
     public static void main(String[] args) {
         // TODO code application logic here
         Controleur c1 = new Controleur();
-        c1.init();
+        c1.tourDeJeux();
         
     }
 }

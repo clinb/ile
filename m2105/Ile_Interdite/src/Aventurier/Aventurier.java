@@ -35,6 +35,38 @@ public abstract class Aventurier {
         grille.setGrille();
     }
 
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public int getNumTourDeJeux() {
+        return numTourDeJeux;
+    }
+
+    public void setNumTourDeJeux(int numTourDeJeux) {
+        this.numTourDeJeux = numTourDeJeux;
+    }
+
+    public Tuile getCaseDepart() {
+        return caseDepart;
+    }
+
+    public void setCaseDepart(Tuile caseDepart) {
+        this.caseDepart = caseDepart;
+    }
+
+    public int getPA() {
+        return PA;
+    }
+
+    public void setPA(int PA) {
+        this.PA = PA;
+    }
+
     public void setPosI(int i) {
         this.posI = i;
     }

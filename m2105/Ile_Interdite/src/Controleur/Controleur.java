@@ -35,17 +35,54 @@ public class Controleur {
     private String choixAventurier;
     private boolean perdu;
 
-    public void choixAction(Action action) {
+    public void choixAction(Action a, Aventurier av) {
+
+        if (a == Action.ASSECHER) {
+            av.assecher();
+
+        } else if (a == Action.DEPLACER) {
+            av.deplacement();
+        }
 
     }
-    
-    /*public boolean getGagne() {
+
+    public void tourDeJeux() {
+        init();
+        Scanner choix = new Scanner(System.in);
+        for (int i = 0; i < joueurs.size(); i++) {
+            String c;
+            joueurs.get(i).setPA(3);
+            do {
+                do{
+                    System.out.println("\n \nEssayer de faire une action parmi celle proposées ci dessous:\n");
+                    System.out.println("-assecher");
+                    System.out.println("-deplacer");
+
+                    
+                    c = choix.nextLine();
+
+                 }while(c == "assecher" || c == "deplacer");
+
+                if (c.equalsIgnoreCase("assecher")) {
+                    choixAction(Action.ASSECHER, joueurs.get(i));
+                    joueurs.get(i).setPA(joueurs.get(i).getPA() - 1);
+
+                } else if (c.equalsIgnoreCase("deplacer")) {
+                    choixAction(Action.DEPLACER, joueurs.get(i));
+                    joueurs.get(i).setPA(joueurs.get(i).getPA() - 1);
+                }
+
+            } while (joueurs.get(i).getPA() >= 3);
+
+        }
+        /*public boolean getGagne() {
         
     }
     
     public boolean getPerdu() {
         
     }*/
+    }
 
     public void init() {
         nbJoueurs = 0;
@@ -117,11 +154,11 @@ public class Controleur {
                 } else {
                     System.out.println("Nom mal tapé ou aventurier déjà enregistré !");
                 }
-               
+
             }
             selec = false;
         }
         System.out.println("Tous les joueurs sont bien enregistrés !");
     }
-    
+
 }

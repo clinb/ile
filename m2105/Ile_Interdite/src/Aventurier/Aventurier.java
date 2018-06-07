@@ -39,8 +39,8 @@ public abstract class Aventurier {
         this.posI = i;
     }
 
-    public void setPosJ(int i) {
-        this.posJ = i;
+    public void setPosJ(int j) {
+        this.posJ = j;
     }
 
     public int getPosJ() {

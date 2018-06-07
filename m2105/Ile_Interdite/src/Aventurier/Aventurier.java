@@ -23,7 +23,7 @@ public abstract class Aventurier {
     private Grille grille = new Grille();
 
     private boolean droite, gauche, bas, haut, nulpart;
-    private String info;
+    
 
     public Aventurier(String nom, int numTourDeJeux, Tuile caseDepart) {
         this.nom = nom;
@@ -107,15 +107,14 @@ public abstract class Aventurier {
             }
         }
     }
-
-    public void verifAssecher() {
+    
+    
+    public void verifAssecher(){
         droite = false;
         gauche = false;
-        bas = false;
         haut = false;
+        bas = false;
         nulpart = true;
-        String info;
-
         // les verifications
         System.out.println("\nvous pouvez assecher les cases...\n");
 
@@ -181,39 +180,10 @@ public abstract class Aventurier {
                 }
                 System.out.println("-pas bouger\n");
                 System.out.println("CHOISIS !");
-                info = choix.nextLine();
-            } while (info != "droite" || info != "gauche" || info != "haut" || info != "bas" || info != "pas bouger");
+                choix.nextLine();
+            } while (choix.nextLine().equalsIgnoreCase("droite") || choix.nextLine().equalsIgnoreCase("gauche") 
+                        || choix.nextLine().equalsIgnoreCase("haut") || choix.nextLine().equalsIgnoreCase("bas") || 
+                    choix.nextLine().equalsIgnoreCase("pas bouger"));
         }
-
-        //je part de l'optique qu'il a encore des PA car c'est au tour de jeux d'y regarder
-        // je demande a l'utilisateur de choisir son action si c'est possible
-        if (!verifAssecher()) {
-            Scanner choix = new Scanner(System.in);
-            System.out.println("Veuillez choisir la case à assecher parmi :\n");
-
-            do {
-                if (droite) {
-                    System.out.println("-droite");
-                    grille.getTuile(posI, posJ + 1).setEtatTuile(EtatTuile.SECHE);
-                }
-                if (gauche) {
-                    System.out.println("-gauche");
-                    grille.getTuile(posI, posJ - 1).setEtatTuile(EtatTuile.SECHE);
-                }
-                if (haut) {
-                    System.out.println("-en haut");
-                    grille.getTuile(posI - 1, posJ).setEtatTuile(EtatTuile.SECHE);
-                }
-                if (bas) {
-                    System.out.println("-en bas\n");
-
-                    grille.getTuile(posI + 1, posJ).setEtatTuile(EtatTuile.SECHE);
-                }
-                System.out.println("-pas bouger\n");
-                System.out.println("CHOISIS !");
-                info = choix.nextLine();
-            } while (!info.equalsIgnoreCase("droite") || !info.equalsIgnoreCase("gauche") || !info.equalsIgnoreCase("haut") || !info.equalsIgnoreCase("bas") || !info.equalsIgnoreCase("pas bouger"));
-        }
-
     }
 }

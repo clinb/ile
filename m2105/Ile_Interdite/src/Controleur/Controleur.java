@@ -33,10 +33,19 @@ public class Controleur {
     private Ingenieur ingenieur;
     private Explorateur explorateur;
     private String choixAventurier;
+    private boolean perdu;
 
     public void choixAction(Action action) {
 
     }
+    
+    /*public boolean getGagne() {
+        
+    }
+    
+    public boolean getPerdu() {
+        
+    }*/
 
     public void init() {
         nbJoueurs = 0;

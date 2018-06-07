@@ -108,8 +108,12 @@ public abstract class Aventurier {
     }
     
     
-    public boolean verifAssecher(){
-        boolean droite = false, gauche=false , bas=false, haut=false, nulpart= true;
+    public void verifAssecher(){
+        droite = false;
+        gauche = false;
+        haut = false;
+        bas = false;
+        nulpart = true;
         // les verifications
         System.out.println("\nvous pouvez assecher les cases...\n");
         if(grille.getTuile(posI, posJ+1).getEtatTuile() == EtatTuile.INONDEE){
@@ -135,7 +139,6 @@ public abstract class Aventurier {
         if(nulpart){
             System.out.println("Vous ne pouvez rien assecher dans les alentours");
         }
-        return nulpart;
     }
     
     
@@ -146,8 +149,8 @@ public abstract class Aventurier {
         
         
         // je demande a l'utilisateur de choisir son action si c'est possible
-        
-        if(!verifAssecher()){
+        verifAssecher();
+        if(!nulpart){
         Scanner choix = new Scanner(System.in);
         System.out.println("Veuillez choisir la case à assecher parmi :\n");
         

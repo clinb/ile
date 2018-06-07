@@ -23,6 +23,7 @@ public class Ile_Interdite {
         // TODO code application logic here
         Controleur c1 = new Controleur();
         c1.init();
+        
     }
 }
     

@@ -39,42 +39,42 @@ public class Explorateur extends Aventurier {
         
         System.out.println("Vous pouvez vous déplacer ...");
         
-        if(grille.getTuile(posI, posJ).getEtatTuile(posI, posJ+1)!= EtatTuile.COULEE){  //Etat tuile droite adjacente
+        if(grille.getTuile(posI, posJ+1).getEtatTuile()!= EtatTuile.COULEE){  //Etat tuile droite adjacente
             droite = true;
             System.out.println("à droite");
             nulpart = false;
         }
-        if(grille.getTuile(posI, posJ).getEtatTuile(posI, posJ-1)!= EtatTuile.COULEE){  //Etat tuile gauche adjacente
+        if(grille.getTuile(posI, posJ-1).getEtatTuile()!= EtatTuile.COULEE){  //Etat tuile gauche adjacente
             gauche = true;
             System.out.println("à gauche");
             nulpart = false;
         }
-        if(grille.getTuile(posI, posJ).getEtatTuile(posI-1, posJ)!= EtatTuile.COULEE){  //Etat tuile haut adjacente
+        if(grille.getTuile(posI-1, posJ).getEtatTuile()!= EtatTuile.COULEE){  //Etat tuile haut adjacente
             haut = true; 
             System.out.println("en haut");
             nulpart = false;
         }
-        if(grille.getTuile(posI, posJ).getEtatTuile(posI+1, posJ)!= EtatTuile.COULEE){  //Etat tuile bas adjacente
+        if(grille.getTuile(posI+1, posJ).getEtatTuile()!= EtatTuile.COULEE){  //Etat tuile bas adjacente
             bas = true; 
             System.out.println("en bas");
             nulpart = false;
         }
-        if(grille.getTuile(posI, posJ).getEtatTuile(posI-1, posJ+1)!= EtatTuile.COULEE){  //Etat tuile haut-droite diagonale
+        if(grille.getTuile(posI-1, posJ+1).getEtatTuile()!= EtatTuile.COULEE){  //Etat tuile haut-droite diagonale
             hautdroite = true;
             System.out.println("en digonale haut-droite");
             nulpart = false;
         }
-        if(grille.getTuile(posI, posJ).getEtatTuile(posI-1, posJ-1)!= EtatTuile.COULEE){  //Etat tuile haut-gauche diagonale
+        if(grille.getTuile(posI-1, posJ-1).getEtatTuile()!= EtatTuile.COULEE){  //Etat tuile haut-gauche diagonale
             hautgauche = true;
             System.out.println("en diagonale haut-gauche");
             nulpart = false;
         }
-        if(grille.getTuile(posI, posJ).getEtatTuile(posI+1, posJ+1)!= EtatTuile.COULEE){   //Etat tuile bas-droite diagonale
+        if(grille.getTuile(posI+1, posJ+1).getEtatTuile()!= EtatTuile.COULEE){   //Etat tuile bas-droite diagonale
             basdroite = true; 
             System.out.println("en diagonale bas-droite");
             nulpart = false;
         }
-        if(grille.getTuile(posI, posJ).getEtatTuile(posI+1, posJ-1)!= EtatTuile.COULEE){     //Etat tuile bas-gauche diagonale
+        if(grille.getTuile(posI+1, posJ-1).getEtatTuile()!= EtatTuile.COULEE){     //Etat tuile bas-gauche diagonale
             basgauche = true; 
             System.out.println("en diagonale bas-gauche");
             nulpart = false;

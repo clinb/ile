@@ -57,8 +57,6 @@ public class Controleur {
                     System.out.println("\n \nEssayer de faire une action parmi celle proposées ci dessous:\n");
                     System.out.println("-assecher");
                     System.out.println("-deplacer");
-
-                    
                     c = choix.nextLine();
 
                  }while(c == "assecher" || c == "deplacer");

@@ -46,7 +46,7 @@ public class Controleur {
 
     }
 
-    public void tourDeJeux() {
+    public void tourDeJeuxv2() {
         init();
         Scanner choix = new Scanner(System.in);
         for (int i = 0; i < joueurs.size(); i++) {

@@ -23,7 +23,7 @@ public class Ile_Interdite {
     public static void main(String[] args) {
         // TODO code application logic here
         Controleur c1 = new Controleur();
-        c1.tourDeJeux();
+        c1.tourDeJeuxv2();
         
     }
 }

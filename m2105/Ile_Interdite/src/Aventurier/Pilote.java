@@ -17,4 +17,11 @@ public class Pilote extends Aventurier {
         super(nom, numTourDeJeux, caseDepart);
     }
     
+    
+    
+    
+    public void deplacementSpePilote(){
+        
+    }
+    
 }
